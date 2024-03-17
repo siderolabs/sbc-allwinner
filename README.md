@@ -1,18 +1,11 @@
-# sbc-template
+# sbc-allwinner
 
-This is a template repository to generate a new project for the SBC.
+This repo provides the overlay for Allwinner based Talos image.
 
-The template already contains an example of building and copying over `u-boot`.
-This can be used as a starting point for your own project.
+## Supported Overlay
 
-## Requirements
-
-Using a sbc project templates assume docker is installed on your machine.
-
-## Usage
-
-* Create a new repository using this template.
-* Start by replacing `board` to `<your-board-name>`
-* Update `installers/<your-board-name>/src/main.go` with your own logic.
-* Run `make rekres`
-* Now run `make help` on instructions on setting up `buildx` builder if one is not already setup.
+| Overlay Name           | Board              | Description                        |
+| ---------------------- | ------------------ | ---------------------------------- |
+| bananapi_m64           | BananaPi M64       | Overlay for BananaPi M64           |
+| libretech_all_h3_cc_h5 | LibreTech H3 CC H5 | Overlay for     LibreTech H3 CC H5 |
+| pine64                 | Pine64 A64         | Overlay for Pine64 A64             |

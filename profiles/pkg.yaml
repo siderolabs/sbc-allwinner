@@ -1,5 +1,9 @@
 name: profiles
 variant: scratch
 finalize:
-  - from: /pkg/board
+  - from: /pkg/bananapi_m64
+    to: /rootfs/profiles
+  - from: /pkg/libretech_all_h3_cc_h5
+    to: /rootfs/profiles
+  - from: /pkg/pine64
     to: /rootfs/profiles

@@ -1,0 +1,25 @@
+name: libretech_all_h3_cc_h5
+variant: scratch
+shell: /toolchain/bin/bash
+dependencies:
+  - stage: base
+steps:
+  - env:
+      GOPATH: /go
+    cachePaths:
+      - /.cache/go-build
+      - /go/pkg
+    build:
+      - |
+        export PATH=${PATH}:${TOOLCHAIN}/go/bin
+
+        cd /pkg/src
+        CGO_ENABLED=0 go build -o ./libretech_all_h3_cc_h5 .
+    install:
+      - |
+        mkdir -p /rootfs/installers/
+
+        cp -p /pkg/src/libretech_all_h3_cc_h5 /rootfs/installers/libretech_all_h3_cc_h5
+finalize:
+  - from: /rootfs
+    to: /rootfs

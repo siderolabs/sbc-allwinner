@@ -1,4 +1,4 @@
-name: board
+name: bananapi_m64
 variant: scratch
 shell: /toolchain/bin/bash
 dependencies:
@@ -14,12 +14,12 @@ steps:
         export PATH=${PATH}:${TOOLCHAIN}/go/bin
 
         cd /pkg/src
-        CGO_ENABLED=0 go build -o ./board .
+        CGO_ENABLED=0 go build -o ./bananapi_m64 .
     install:
       - |
         mkdir -p /rootfs/installers/
 
-        cp -p /pkg/src/board /rootfs/installers/board
+        cp -p /pkg/src/bananapi_m64 /rootfs/installers/bananapi_m64
 finalize:
   - from: /rootfs
     to: /rootfs

@@ -1,3 +1,7 @@
 go 1.22.1
 
-use ./installers/board/src
+use (
+	./installers/bananapi_m64/src
+	./installers/libretech_all_h3_cc_h5/src
+	./installers/pine64/src
+)

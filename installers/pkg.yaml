@@ -1,10 +1,28 @@
-name: sbc-board
+name: sbc-allwinner
 variant: scratch
 dependencies:
-  - stage: board
-  - stage: u-boot
-    platform: linux/arm64
+  - stage: bananapi_m64
+  - stage: libretech_all_h3_cc_h5
+  - stage: pine64
   - stage: profiles
+  - stage: u-boot-bananapi_m64
+    platform: linux/arm64
+  - stage: u-boot-libretech_all_h3_cc_h5
+    platform: linux/arm64
+  - stage: u-boot-pine64
+    platform: linux/arm64
+  - image: "{{ .BUILD_ARG_PKGS_PREFIX }}/kernel:{{ .BUILD_ARG_PKGS }}"
+    platform: linux/arm64
+    from: /dtb/allwinner/sun50i-a64-bananapi-m64.dtb
+    to: /rootfs/artifacts/arm64/dtb/allwinner/sun50i-a64-bananapi-m64.dtb
+  - image: "{{ .BUILD_ARG_PKGS_PREFIX }}/kernel:{{ .BUILD_ARG_PKGS }}"
+    platform: linux/arm64
+    from: /dtb/allwinner/sun50i-h5-libretech-all-h3-cc.dtb
+    to: /rootfs/artifacts/arm64/dtb/allwinner/sun50i-h5-libretech-all-h3-cc.dtb
+  - image: "{{ .BUILD_ARG_PKGS_PREFIX }}/kernel:{{ .BUILD_ARG_PKGS }}"
+    platform: linux/arm64
+    from: /dtb/allwinner/sun50i-a64-pine64-plus.dtb
+    to: /rootfs/artifacts/arm64/dtb/allwinner/sun50i-a64-pine64-plus.dtb
 finalize:
   - from: /rootfs
     to: /
