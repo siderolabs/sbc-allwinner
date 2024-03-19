@@ -19,12 +19,14 @@ steps:
       # libretech_all_h3_cc_h5
       - |
         mkdir -p /usr/bin \
-          && ln -sf /toolchain/bin/env /usr/bin/env
+          && ln -sf /toolchain/bin/env /usr/bin/env \
+          && ln -sf /toolchain/bin/python3 /toolchain/bin/python
+
+        pip3 install pyelftools
 
         tar xf u-boot.tar.bz2 --strip-components=1
       - |
         make libretech_all_h3_cc_h5_defconfig
-        sed -i "s/CONFIG_TOOLS_LIBCRYPTO=y/# CONFIG_TOOLS_LIBCRYPTO is not set/" .config
     build:
       - |
         export SCP=/dev/null
