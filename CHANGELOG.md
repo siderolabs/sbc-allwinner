@@ -1,7 +1,6 @@
 ## [sbc-allwinner 0.1.1](https://github.com/siderolabs/sbc-allwinner/releases/tag/v0.1.1) (2025-04-15)
 
-Welcome to the v0.1.1 release of sbc-allwinner!  
-*This is a pre-release of sbc-allwinner*
+Welcome to the v0.1.1 release of sbc-allwinner!
 
 
 
@@ -14,9 +13,11 @@ https://github.com/siderolabs/sbc-allwinner/issues.
 * Andrey Smirnov
 
 ### Changes
-<details><summary>4 commits</summary>
+<details><summary>6 commits</summary>
 <p>
 
+* [`fd8323a`](https://github.com/siderolabs/sbc-allwinner/commit/fd8323a76ec4931ffda3bbe4fd074576f1be1e63) release(v0.1.1): prepare release
+* [`fbb17ab`](https://github.com/siderolabs/sbc-allwinner/commit/fbb17ab2aae2bcac0bcee14cb893ebec3c2a982d) release(v0.1.1): prepare release
 * [`7489c6a`](https://github.com/siderolabs/sbc-allwinner/commit/7489c6afbf4e3ac0186c518b3fec4cc8ba5eed66) chore: bump pkgs and tools
 * [`c1c5d7f`](https://github.com/siderolabs/sbc-allwinner/commit/c1c5d7faf170b42ca951a51ffd5cde6677a250de) feat: use tools as base
 * [`d450e28`](https://github.com/siderolabs/sbc-allwinner/commit/d450e28080fcdfde8ca32a584b5f4a6353c26d3d) chore: unify buildkits
