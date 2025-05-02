@@ -1,3 +1,30 @@
+## [sbc-allwinner 0.1.2](https://github.com/siderolabs/sbc-allwinner/releases/tag/v0.1.2) (2025-05-02)
+
+Welcome to the v0.1.2 release of sbc-allwinner!
+
+
+
+Please try out the release binaries and report any issues at
+https://github.com/siderolabs/sbc-allwinner/issues.
+
+### Contributors
+
+* Noel Georgi
+
+### Changes
+<details><summary>1 commit</summary>
+<p>
+
+* [`715f0ec`](https://github.com/siderolabs/sbc-allwinner/commit/715f0ec7146d240cfd68e0a9fcb13b42856768a8) fix: use grub as bootloader for SBCs
+</p>
+</details>
+
+### Dependency Changes
+
+This release has no dependency changes
+
+Previous release can be found at [v0.1.1](https://github.com/siderolabs/sbc-allwinner/releases/tag/v0.1.1)
+
 ## [sbc-allwinner 0.1.1](https://github.com/siderolabs/sbc-allwinner/releases/tag/v0.1.1) (2025-04-15)
 
 Welcome to the v0.1.1 release of sbc-allwinner!
