@@ -1,4 +1,4 @@
-# syntax = ghcr.io/siderolabs/bldr:v0.5.5
+# syntax = ghcr.io/siderolabs/bldr:v0.5.6
 
 format: v1alpha2
 
@@ -9,7 +9,7 @@ vars:
   arm_trusted_firmware_sha512: 05c2f902df8679ba2da9cadea02eb0fb75844751550843d1cc5ec11530350d33b03e99da3bf1fa675b0959170007d7596897fcae950f41f63e1fd346002c759a
 
   # renovate: datasource=github-tags extractVersion=^v(?<version>.*)$ depName=u-boot/u-boot
-  uboot_version: 2025.10
+  uboot_version: 2026.01
   uboot_sha256: b4f032848e56cc8f213ad59f9132c084dbbb632bc29176d024e58220e0efdf4a
   uboot_sha512: 01ac8b2b36bd73b7accc22afd20cf45d08ff8ece6a3d1c426ec90936d1767245add92572cc162500b2160bbc0e2ceed3e111a2a0dd35f8f3a86edbd4fc78753c
 labels:
