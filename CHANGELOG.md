@@ -1,3 +1,30 @@
+## [sbc-allwinner 0.1.4](https://github.com/siderolabs/sbc-allwinner/releases/tag/v0.1.4) (2026-02-24)
+
+Welcome to the v0.1.4 release of sbc-allwinner!
+
+
+
+Please try out the release binaries and report any issues at
+https://github.com/siderolabs/sbc-allwinner/issues.
+
+### Contributors
+
+* Noel Georgi
+
+### Changes
+<details><summary>1 commit</summary>
+<p>
+
+* [`079d049`](https://github.com/siderolabs/sbc-allwinner/commit/079d0490550f7a5932c191501da7a4e3a4f86cf9) fix: directory creation permissions
+</p>
+</details>
+
+### Dependency Changes
+
+This release has no dependency changes
+
+Previous release can be found at [v0.1.3](https://github.com/siderolabs/sbc-allwinner/releases/tag/v0.1.3)
+
 ## [sbc-allwinner 0.1.3](https://github.com/siderolabs/sbc-allwinner/releases/tag/v0.1.3) (2025-11-13)
 
 Welcome to the v0.1.3 release of sbc-allwinner!
