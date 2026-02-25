@@ -1,3 +1,30 @@
+## [sbc-allwinner 0.1.5](https://github.com/siderolabs/sbc-allwinner/releases/tag/v0.1.5) (2026-02-25)
+
+Welcome to the v0.1.5 release of sbc-allwinner!
+
+
+
+Please try out the release binaries and report any issues at
+https://github.com/siderolabs/sbc-allwinner/issues.
+
+### Contributors
+
+* Noel Georgi
+
+### Changes
+<details><summary>1 commit</summary>
+<p>
+
+* [`334dbe8`](https://github.com/siderolabs/sbc-allwinner/commit/334dbe89092dbaf38d56c9217e2ffb9dc0c64060) feat: bump tools and pkgs
+</p>
+</details>
+
+### Dependency Changes
+
+This release has no dependency changes
+
+Previous release can be found at [v0.1.4](https://github.com/siderolabs/sbc-allwinner/releases/tag/v0.1.4)
+
 ## [sbc-allwinner 0.1.4](https://github.com/siderolabs/sbc-allwinner/releases/tag/v0.1.4) (2026-02-24)
 
 Welcome to the v0.1.4 release of sbc-allwinner!
