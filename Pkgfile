@@ -1,16 +1,17 @@
-# syntax = ghcr.io/siderolabs/bldr:v0.5.5
+# syntax = ghcr.io/siderolabs/bldr:v0.6.5
 
 format: v1alpha2
 
 vars:
   # renovate: datasource=github-tags depName=ARM-software/arm-trusted-firmware
-  arm_trusted_firmware_version: lts-v2.12.8
-  arm_trusted_firmware_sha256: bd7f67ee8aeb1a37c0db832701291342bd3e18dc4d924bcefda53b078ddfb0af
-  arm_trusted_firmware_sha512: 05c2f902df8679ba2da9cadea02eb0fb75844751550843d1cc5ec11530350d33b03e99da3bf1fa675b0959170007d7596897fcae950f41f63e1fd346002c759a
+  arm_trusted_firmware_version: lts-v2.14.11
+  arm_trusted_firmware_sha256: 9ca8074f6e5b79131acad5a6d82e093850b46ea80025dd81e7b532b8839bc388
+  arm_trusted_firmware_sha512: 0d9853c92e1e895da3f571fecbb91b8ab1194b91bb5fb4bd34de9ef7c32eb0137d4753c888d7e4fadac39da414292ce42ac3be4de32e02400bd5dad5ccaf465c
 
   # renovate: datasource=github-tags extractVersion=^v(?<version>.*)$ depName=u-boot/u-boot
-  uboot_version: 2025.10
-  uboot_sha256: b4f032848e56cc8f213ad59f9132c084dbbb632bc29176d024e58220e0efdf4a
-  uboot_sha512: 01ac8b2b36bd73b7accc22afd20cf45d08ff8ece6a3d1c426ec90936d1767245add92572cc162500b2160bbc0e2ceed3e111a2a0dd35f8f3a86edbd4fc78753c
+  uboot_version: 2026.10
+  uboot_sha256: f943a88389c8fd70a6b0d061a88267465e143c7ca6ea2b75837ab20f5b60c739
+  uboot_sha512: e38fee5568f14332c37a7ca03d3e69367bcc342ec09421a2b6d971a98d62b7ec522602ecd5df4c9ffb5d900672861259a6c6902294d7fd89f45afc268dc68e10
+
 labels:
   org.opencontainers.image.source: https://github.com/siderolabs/sbc-allwinner
