@@ -5,7 +5,15 @@ project_name = "sbc-allwinner"
 github_repo = "siderolabs/sbc-allwinner"
 match_deps = "^github.com/(siderolabs/[a-zA-Z0-9-]+)$"
 
-previous = "v0.1.4"
+previous = "v0.1.5"
 pre_release = false
 
-# [notes]
+[notes]
+
+    [notes.updates]
+        title = "Component Updates"
+        description = """\
+* Linux: 7.3 (via siderolabs/pkgs)
+* U-Boot: 2026.10
+* Trusted Firmware-A: lts-v2.14.11
+"""

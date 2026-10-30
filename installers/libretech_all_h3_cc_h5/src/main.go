@@ -5,9 +5,11 @@
 package main
 
 import (
+	"context"
 	_ "embed"
 	"fmt"
 	"os"
+	"os/signal"
 	"path/filepath"
 
 	"github.com/siderolabs/go-copy/copy"
@@ -22,16 +24,19 @@ const (
 )
 
 func main() {
-	adapter.Execute(&Bananapi64Installer{})
+	ctx, cancel := signal.NotifyContext(context.Background(), os.Interrupt)
+	defer cancel()
+
+	adapter.Execute(ctx, &LibretechAllH3CCH5Installer{})
 }
 
 // References:
 //   - https://libre.computer/products/boards/all-h3-cc/
-type Bananapi64Installer struct{}
+type LibretechAllH3CCH5Installer struct{}
 
-type bananapim64ExtraOptions struct{}
+type libretechAllH3CCH5ExtraOptions struct{}
 
-func (i *Bananapi64Installer) GetOptions(extra bananapim64ExtraOptions) (overlay.Options, error) {
+func (i *LibretechAllH3CCH5Installer) GetOptions(_ context.Context, extra libretechAllH3CCH5ExtraOptions) (overlay.Options, error) {
 	return overlay.Options{
 		Name: "libretech_all_h3_cc_h5",
 		KernelArgs: []string{
@@ -46,7 +51,7 @@ func (i *Bananapi64Installer) GetOptions(extra bananapim64ExtraOptions) (overlay
 	}, nil
 }
 
-func (i *Bananapi64Installer) Install(options overlay.InstallOptions[bananapim64ExtraOptions]) error {
+func (i *LibretechAllH3CCH5Installer) Install(_ context.Context, options overlay.InstallOptions[libretechAllH3CCH5ExtraOptions]) error {
 	var f *os.File
 
 	f, err := os.OpenFile(options.InstallDisk, os.O_RDWR|unix.O_CLOEXEC, 0o666)
@@ -66,7 +71,7 @@ func (i *Bananapi64Installer) Install(options overlay.InstallOptions[bananapim64
 	}
 
 	// NB: In the case that the block device is a loopback device, we sync here
-	// to esure that the file is written before the loopback device is
+	// to ensure that the file is written before the loopback device is
 	// unmounted.
 	err = f.Sync()
 	if err != nil {

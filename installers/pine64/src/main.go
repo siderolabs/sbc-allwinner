@@ -5,9 +5,11 @@
 package main
 
 import (
+	"context"
 	_ "embed"
 	"fmt"
 	"os"
+	"os/signal"
 	"path/filepath"
 
 	"github.com/siderolabs/go-copy/copy"
@@ -22,16 +24,19 @@ const (
 )
 
 func main() {
-	adapter.Execute(&Bananapi64Installer{})
+	ctx, cancel := signal.NotifyContext(context.Background(), os.Interrupt)
+	defer cancel()
+
+	adapter.Execute(ctx, &Pine64Installer{})
 }
 
 // References:
 //   - http://linux-sunxi.org/Pine64
-type Bananapi64Installer struct{}
+type Pine64Installer struct{}
 
-type bananapim64ExtraOptions struct{}
+type pine64ExtraOptions struct{}
 
-func (i *Bananapi64Installer) GetOptions(extra bananapim64ExtraOptions) (overlay.Options, error) {
+func (i *Pine64Installer) GetOptions(_ context.Context, extra pine64ExtraOptions) (overlay.Options, error) {
 	return overlay.Options{
 		Name: "pine64",
 		KernelArgs: []string{
@@ -46,7 +51,7 @@ func (i *Bananapi64Installer) GetOptions(extra bananapim64ExtraOptions) (overlay
 	}, nil
 }
 
-func (i *Bananapi64Installer) Install(options overlay.InstallOptions[bananapim64ExtraOptions]) error {
+func (i *Pine64Installer) Install(_ context.Context, options overlay.InstallOptions[pine64ExtraOptions]) error {
 	var f *os.File
 
 	f, err := os.OpenFile(options.InstallDisk, os.O_RDWR|unix.O_CLOEXEC, 0o666)
@@ -66,7 +71,7 @@ func (i *Bananapi64Installer) Install(options overlay.InstallOptions[bananapim64
 	}
 
 	// NB: In the case that the block device is a loopback device, we sync here
-	// to esure that the file is written before the loopback device is
+	// to ensure that the file is written before the loopback device is
 	// unmounted.
 	err = f.Sync()
 	if err != nil {
