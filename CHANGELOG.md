@@ -1,3 +1,37 @@
+## [sbc-allwinner 0.2.0](https://github.com/siderolabs/sbc-allwinner/releases/tag/v0.2.0) (2026-11-02)
+
+Welcome to the v0.2.0 release of sbc-allwinner!
+
+
+
+Please try out the release binaries and report any issues at
+https://github.com/siderolabs/sbc-allwinner/issues.
+
+### Component Updates
+
+* Linux: 7.3 (via siderolabs/pkgs)
+* U-Boot: 2026.10
+* Trusted Firmware-A: lts-v2.14.11
+
+
+### Contributors
+
+* Andrey Smirnov
+
+### Changes
+<details><summary>1 commit</summary>
+<p>
+
+* [`5b064d8`](https://github.com/siderolabs/sbc-allwinner/commit/5b064d866104dd2e4870f4c591897b8f78eac7bc) feat: update dependencies
+</p>
+</details>
+
+### Dependency Changes
+
+This release has no dependency changes
+
+Previous release can be found at [v0.1.5](https://github.com/siderolabs/sbc-allwinner/releases/tag/v0.1.5)
+
 ## [sbc-allwinner 0.1.5](https://github.com/siderolabs/sbc-allwinner/releases/tag/v0.1.5) (2026-02-25)
 
 Welcome to the v0.1.5 release of sbc-allwinner!
